@@ -62,7 +62,7 @@
         align-items: center;
         justify-content: space-between;
         margin-top: 10px;
-  
+
         button {
           height: 60px;
           width: 240px;
@@ -79,8 +79,15 @@
           transition: all ease 0.2s;
   
           &:hover {
-            background-color: #92a4ad;
-            color: var(--icon);
+            transform: scale(0.9);
+          }
+        }
+
+        a {
+          transition: all ease 0.2s;
+
+          &:hover {
+            transform: scale(0.9);
           }
         }
       }
