@@ -1,0 +1,89 @@
+.container-two {
+  background-color: var(--bg-lilac);
+
+  .about-me-section {
+    display: flex;
+    align-items: center;
+    padding: 150px 90px;
+
+    .about-me-text {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      z-index: 3;
+
+      h2 {
+        font-size: 72px;
+        font-weight: normal;
+      }
+
+      p {
+        font-size: 22px;
+      }
+    }
+
+    img {
+      height: fit-content;
+      width: 600px;
+    }
+  }
+  .portfolio-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    gap: 60px;
+    margin-top: -380px;
+    padding-bottom: 350px;
+
+    .bg {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: fit-content;
+    }
+    
+    h2 {
+      font-size: 72px;
+      font-weight: normal;
+      padding: 0 90px 0 90px;
+      z-index: 3;
+      padding-top: 280px;
+      width: 100%;
+      text-align: right;
+    }
+
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 90px;
+      padding: 0 90px 0 90px;
+      z-index: 3;
+
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .project {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          font-size: 23px;
+
+          img {
+            transition: all ease 0.2s;
+            cursor: pointer;
+
+            &:hover {
+              transform: rotate(-8deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

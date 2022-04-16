@@ -1,0 +1,15 @@
+:root {
+  --bg-lilac: #C5CEFF;
+  --bg-pink: #FFDEE1;
+  --font: #555F64;
+  --button: #87979F;
+  --icon: #EF9EA4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  color: var(--font);
+}

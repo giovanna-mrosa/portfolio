@@ -1,0 +1,24 @@
+<svg width="285" height="199" viewBox="0 0 285 199" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1.5" y="1.5" width="268" height="185" rx="9.5" fill="#F2EDF1" stroke="#998795" stroke-width="3"/>
+<circle cx="15.5" cy="13.5" r="3.5" fill="#8A7171"/>
+<circle cx="26.5" cy="13.5" r="3.5" fill="#8A7171"/>
+<circle cx="37.5" cy="13.5" r="3.5" fill="#8A7171"/>
+<path d="M12.5 177.5V25H47C49.9358 17.6505 51 12 54 12H93.5C96.5 12 98.6513 18.1916 101.5 25H258.5V177.5H12.5Z" fill="#9A8795"/>
+<path d="M240 178L30 178V148C30 146.343 31.3431 145 33 145L237 145C238.657 145 240 146.343 240 148V178Z" fill="#99B9F1"/>
+<rect x="240" y="122" width="210" height="56" rx="3" transform="rotate(-180 240 122)" fill="#9FE0D0"/>
+<rect x="86" y="138" width="40" height="9" rx="3" transform="rotate(-180 86 138)" fill="#F3A6AD"/>
+<rect x="132" y="138" width="40" height="9" rx="3" transform="rotate(-180 132 138)" fill="#F3A6AD"/>
+<rect x="180" y="138" width="40" height="9" rx="3" transform="rotate(-180 180 138)" fill="#F3A6AD"/>
+<rect x="226" y="138" width="40" height="9" rx="3" transform="rotate(-180 226 138)" fill="#F3A6AD"/>
+<path d="M240 177.5H240.5V177V155C240.5 153.067 238.933 151.5 237 151.5L41 151.5C39.067 151.5 37.5 153.067 37.5 155V177V177.5H38L240 177.5Z" stroke="#9A8795"/>
+<rect x="228.5" y="101.5" width="55" height="96" rx="9.5" fill="#F2EDF1" stroke="#998795" stroke-width="3"/>
+<line x1="245.5" y1="104.5" x2="266.5" y2="104.5" stroke="#998795" stroke-linecap="round"/>
+<rect x="233" y="107" width="46" height="86" rx="3" fill="#9A8795"/>
+<line x1="38" y1="177.5" x2="227" y2="177.5" stroke="#99B9F1"/>
+<circle cx="138.5" cy="44.5" r="14.5" fill="#DDB4ED"/>
+<path d="M272 193H240V178C240 176.343 241.343 175 243 175H269C270.657 175 272 176.343 272 178V193Z" fill="#99B9F1"/>
+<rect x="272" y="169" width="32" height="34" rx="3" transform="rotate(-180 272 169)" fill="#9FE0D0"/>
+<path d="M269 192.5H269.5V192V181C269.5 179.067 267.933 177.5 266 177.5H246C244.067 177.5 242.5 179.067 242.5 181V192V192.5H243H269Z" stroke="white"/>
+<circle cx="256" cy="122" r="9" fill="#F7CAB7"/>
+<line x1="243" y1="192.5" x2="269" y2="192.5" stroke="#99B9F1"/>
+</svg>

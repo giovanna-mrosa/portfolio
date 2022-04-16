@@ -1,0 +1,16 @@
+.web-menu {
+  display: flex;
+  gap: 75px;
+  padding-top: 60px;
+
+  a {
+    font-size: 24px;
+    text-decoration: none;
+
+    transition: all ease 0.2s;
+
+    &:hover {
+      color: var(--icon);
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.container-one {
+  background: linear-gradient(180deg, var(--bg-pink) 0%, var(--bg-lilac) 100%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    padding-top: 120px;
+  }
+}
