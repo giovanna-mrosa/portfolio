@@ -124,6 +124,12 @@
 
         .dot {
           margin-right: 5px;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+          }
         }
 
       }
@@ -137,7 +143,7 @@
 
         span {
           color: #EF9EA4;
-        }
+        }        
       }
 
       h2 {
@@ -146,9 +152,20 @@
         font-size: 28px;
         font-weight: 400;
         color: #EF9EA4;
+        cursor: pointer;
 
         span {
           color: #87979F;
+        }
+
+        transition: all ease 0.2s;
+
+        &:hover {
+          color: #87979F;
+
+          span {
+            color: #EF9EA4;
+          }
         }
       }
     }
