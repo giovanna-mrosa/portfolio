@@ -9,6 +9,29 @@
 
   .tag {
     position: absolute;
+
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+
+
+    &:hover {
+    animation-name: rotate;
+    animation-timing-function: ease;
+    }
+    
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+      50% {
+        transform: rotate(10deg);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
   }
 
   .tag4 {
@@ -54,6 +77,12 @@
     .bunny, .stars, .console {
       position: absolute;
       padding: 0;
+
+      transition: all ease 0.2s;
+
+      &:hover {
+        transform: rotate(360deg) scale(1.3);
+      }
     }
 
     .bunny {
