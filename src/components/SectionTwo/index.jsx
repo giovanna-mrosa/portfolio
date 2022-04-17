@@ -12,6 +12,9 @@ import screenNine from '../../assets/tela9.svg'
 import bgWeb from '../../assets/bubble-bg-web.png'
 import closeIcon from '../../assets/close.svg'
 import devfinderImg from '../../assets/devfinder.svg'
+import shortlyImg from '../../assets/shortly.svg'
+import adviceGeneratorImg from '../../assets/advice-generator.svg'
+import manageImg from '../../assets/manage.svg'
 
 import './styles.scss'
 import Modal from 'react-modal';
@@ -54,11 +57,25 @@ export function SectionTwo() {
       'demo': 'https://frontend-mentor-devfinder.vercel.app/',
     },
     {
-      'image': devfinderImg,
+      'image': shortlyImg,
       'title': 'shortly',
       'description': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis est aspernatur autem provident, ex cum modi. Alias amet minima voluptas quos beatae, facere nisi doloribus in vel ex? Exercitationem, ipsa?',
       'repo': 'https://github.com/giovanna-mrosa/frontendMentor-shortly',
-      'demo': 'https://frontend-mentor-devfinder.vercel.app/',
+      'demo': 'https://frontend-mentor-shortly-pied.vercel.app/',
+    },
+    {
+      'image': adviceGeneratorImg,
+      'title': 'adviceGenerator',
+      'description': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis est aspernatur autem provident, ex cum modi. Alias amet minima voluptas quos beatae, facere nisi doloribus in vel ex? Exercitationem, ipsa?',
+      'repo': 'https://github.com/giovanna-mrosa/frontendMentor-advice-generator',
+      'demo': 'https://frontend-mentor-advice-generator-ten.vercel.app/',
+    },
+    {
+      'image': manageImg,
+      'title': 'manage',
+      'description': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis est aspernatur autem provident, ex cum modi. Alias amet minima voluptas quos beatae, facere nisi doloribus in vel ex? Exercitationem, ipsa?',
+      'repo': 'hhttps://github.com/giovanna-mrosa/frontendMentor-manage',
+      'demo': 'https://frontend-mentor-manage.vercel.app/',
     }
   ]
 
@@ -125,7 +142,12 @@ export function SectionTwo() {
           </div>
           <div className="row">
             <div className="project">
-              <img src={screenFour} alt="" className="mockup" />
+              <img 
+                src={screenFour} 
+                alt="" className="mockup" 
+                onClick={(event) => openModal(event.target.id)}
+                id="manage"
+              />
               <p>manage</p>
             </div>
             <div className="project">
@@ -159,7 +181,7 @@ export function SectionTwo() {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <img src={devfinderImg} alt="" className="project1"/>
+        <img src={projectModal?.image} alt="" className="project1"/>
         <img src={closeIcon} onClick={closeModal} alt="Close icon" className="close-icon" />
         <div className="content-modal">
           <h2 className="title-modal">{projectModal?.title}</h2>          
