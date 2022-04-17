@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from "react";
 import avatarGif from '../../assets/avatar.gif'
 import screenOne from '../../assets/tela1.svg'
@@ -146,14 +147,14 @@ export function SectionTwo() {
         <img src={avatarGif} alt="Avatar" />
       </section>
       <section className="portfolio-section" id="portfolio">
-        <img src={bgWeb} alt="" className="bg" />
+        <img src={bgWeb} alt="Bubble background" className="bg" />
         <h2>portfolio</h2>
         <div className="projects">
           <div className="row">
             <div className="project">
               <img 
                 src={screenOne} 
-                alt="" 
+                alt="Mockup" 
                 className="mockup" 
                 onClick={(event) => openModal(event.target.id)}
                 id="devfinder"
@@ -163,7 +164,8 @@ export function SectionTwo() {
             <div className="project">
               <img 
                 src={screenTwo} 
-                alt="" onClick={(event) => openModal(event.target.id)}
+                alt="Mockup" 
+                onClick={(event) => openModal(event.target.id)}
                 id="shortly"
                 className="mockup" 
               />
@@ -172,7 +174,7 @@ export function SectionTwo() {
             <div className="project">
               <img 
                 src={screenThree} 
-                alt="" 
+                alt="Mockup" 
                 className="mockup" 
                 onClick={(event) => openModal(event.target.id)}
                 id="adviceGenerator"
@@ -184,7 +186,8 @@ export function SectionTwo() {
             <div className="project">
               <img 
                 src={screenFour} 
-                alt="" className="mockup" 
+                alt="Mockup" 
+                className="mockup" 
                 onClick={(event) => openModal(event.target.id)}
                 id="manage"
               />
@@ -193,7 +196,7 @@ export function SectionTwo() {
             <div className="project">
               <img 
                 src={screenFive} 
-                alt="" 
+                alt="Mockup" 
                 className="mockup" 
                 onClick={(event) => openModal(event.target.id)}
                 id="blogr"
@@ -203,7 +206,7 @@ export function SectionTwo() {
             <div className="project">
               <img 
                 src={screenSix} 
-                alt="" 
+                alt="Mockup" 
                 className="mockup"
                 onClick={(event) => openModal(event.target.id)}
                 id="huddle"
@@ -215,7 +218,7 @@ export function SectionTwo() {
             <div className="project">
               <img 
                 src={screenSeven} 
-                alt="" 
+                alt="Mockup" 
                 className="mockup" 
                 onClick={(event) => openModal(event.target.id)}
                 id="easyclass"
@@ -225,7 +228,7 @@ export function SectionTwo() {
             <div className="project">
               <img 
                 src={screenEight} 
-                alt="" 
+                alt="Mockup" 
                 className="mockup"
                 onClick={(event) => openModal(event.target.id)}
                 id="splitter" 
@@ -235,7 +238,7 @@ export function SectionTwo() {
             <div className="project">
               <img 
                 src={screenNine} 
-                alt="" 
+                alt="Mockup" 
                 className="mockup"
                 onClick={(event) => openModal(event.target.id)}
                 id="mmdecor"
@@ -251,7 +254,7 @@ export function SectionTwo() {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <img src={projectModal?.image} alt="" className="project1"/>
+        <img src={projectModal?.image} className="project1"/>
         <img src={closeIcon} onClick={closeModal} alt="Close icon" className="close-icon" />
         <div className="content-modal">
           <h2 className="title-modal">{projectModal?.title}</h2>          
