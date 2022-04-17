@@ -95,6 +95,12 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
+
+    transition: all ease 0.2s;
+  
+      &:hover {
+        transform: scale(0.9);
+      }
   }
 
   .project1 {
