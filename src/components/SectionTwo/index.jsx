@@ -15,6 +15,11 @@ import devfinderImg from '../../assets/devfinder.svg'
 import shortlyImg from '../../assets/shortly.svg'
 import adviceGeneratorImg from '../../assets/advice-generator.svg'
 import manageImg from '../../assets/manage.svg'
+import blogrImg from '../../assets/blogr.png'
+import huddleImg from '../../assets/huddle.png'
+import easyclassImg from '../../assets/easyclass.png'
+import splitterImg from '../../assets/splitter.png'
+import mmdecorImg from '../../assets/mmdecor.png'
 
 import './styles.scss'
 import Modal from 'react-modal';
@@ -74,8 +79,43 @@ export function SectionTwo() {
       'image': manageImg,
       'title': 'manage',
       'description': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis est aspernatur autem provident, ex cum modi. Alias amet minima voluptas quos beatae, facere nisi doloribus in vel ex? Exercitationem, ipsa?',
-      'repo': 'hhttps://github.com/giovanna-mrosa/frontendMentor-manage',
+      'repo': 'https://github.com/giovanna-mrosa/frontendMentor-manage',
       'demo': 'https://frontend-mentor-manage.vercel.app/',
+    },
+    {
+      'image': blogrImg,
+      'title': 'blogr',
+      'description': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis est aspernatur autem provident, ex cum modi. Alias amet minima voluptas quos beatae, facere nisi doloribus in vel ex? Exercitationem, ipsa?',
+      'repo': 'https://github.com/giovanna-mrosa/frontendMentor-blogr',
+      'demo': 'https://frontend-mentor-blogr-giovanna-mrosa.vercel.app/',
+    },
+    {
+      'image': huddleImg,
+      'title': 'huddle',
+      'description': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis est aspernatur autem provident, ex cum modi. Alias amet minima voluptas quos beatae, facere nisi doloribus in vel ex? Exercitationem, ipsa?',
+      'repo': 'https://github.com/giovanna-mrosa/FrontendMentor-huddle',
+      'demo': 'https://frontend-mentor-huddle-giovanna-mrosa.vercel.app/',
+    },
+    {
+      'image': easyclassImg,
+      'title': 'easyclass',
+      'description': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis est aspernatur autem provident, ex cum modi. Alias amet minima voluptas quos beatae, facere nisi doloribus in vel ex? Exercitationem, ipsa?',
+      'repo': 'https://github.com/giovanna-mrosa/TrueCode-easyclassForm',
+      'demo': 'https://giovanna-mrosa.github.io/TrueCode-easyclassForm/#',
+    },
+    {
+      'image': splitterImg,
+      'title': 'splitter',
+      'description': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis est aspernatur autem provident, ex cum modi. Alias amet minima voluptas quos beatae, facere nisi doloribus in vel ex? Exercitationem, ipsa?',
+      'repo': 'https://github.com/giovanna-mrosa/frontendMentor-tipCalculator',
+      'demo': 'https://giovanna-mrosa.github.io/frontendMentor-tipCalculator/',
+    },
+    {
+      'image': mmdecorImg,
+      'title': 'mmdecor',
+      'description': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis est aspernatur autem provident, ex cum modi. Alias amet minima voluptas quos beatae, facere nisi doloribus in vel ex? Exercitationem, ipsa?',
+      'repo': 'https://github.com/mm-decor/mm-decor',
+      'demo': 'https://mm-decor.github.io/mm-decor/',
     }
   ]
 
@@ -151,26 +191,56 @@ export function SectionTwo() {
               <p>manage</p>
             </div>
             <div className="project">
-              <img src={screenFive} alt="" className="mockup" />
+              <img 
+                src={screenFive} 
+                alt="" 
+                className="mockup" 
+                onClick={(event) => openModal(event.target.id)}
+                id="blogr"
+              />
               <p>blogr</p>
             </div>
             <div className="project">
-              <img src={screenSix} alt="" className="mockup" />
+              <img 
+                src={screenSix} 
+                alt="" 
+                className="mockup"
+                onClick={(event) => openModal(event.target.id)}
+                id="huddle"
+              />
               <p>huddle</p>
             </div>
           </div>
           <div className="row">
             <div className="project">
-              <img src={screenSeven} alt="" className="mockup" />
+              <img 
+                src={screenSeven} 
+                alt="" 
+                className="mockup" 
+                onClick={(event) => openModal(event.target.id)}
+                id="easyclass"
+              />
               <p>easy-class</p>
             </div>
             <div className="project">
-              <img src={screenEight} alt="" className="mockup" />
+              <img 
+                src={screenEight} 
+                alt="" 
+                className="mockup"
+                onClick={(event) => openModal(event.target.id)}
+                id="splitter" 
+              />
               <p>splitter</p>
             </div>
             <div className="project">
-              <img src={screenNine} alt="" className="mockup" />
-              <p>areaflix</p>
+              <img 
+                src={screenNine} 
+                alt="" 
+                className="mockup"
+                onClick={(event) => openModal(event.target.id)}
+                id="mmdecor"
+              />
+              <p>mmdecor</p>
             </div>
           </div>
         </div>
