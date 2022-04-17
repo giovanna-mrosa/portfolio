@@ -1,0 +1,127 @@
+.monitor-box {
+  width: 1190px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 60px;
+
+  .tag {
+    position: absolute;
+  }
+
+  .tag4 {
+    left: 95px;
+    top: 140px;
+  }
+
+  .tag2 {
+    right: 0;
+    top: 140px;
+  }
+
+  .tag3 {
+    bottom: -100px;
+    left: -40px;
+  }
+
+  .tag1 {
+    bottom: -60px;
+    right: 120px;
+  }
+
+  .monitor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 710px;
+    height: 365px;
+    border-radius: 16px;
+    background-color: #C4C4C4;
+    border: 5px solid #8A7171;
+    position: relative;
+
+    &::after {
+      content: '';
+      background: url(../../assets/base.svg) no-repeat;
+      width: 357px;
+      height: 400px;
+      position: absolute;
+      bottom: -400px;
+    }
+
+    .bunny, .stars, .console {
+      position: absolute;
+      padding: 0;
+    }
+
+    .bunny {
+      top: 0;
+      left: 0;
+    }
+
+    .stars {
+      top: 0;
+      right: 0;
+    }
+
+    .console {
+      bottom: -15px;
+      right: -5px;
+    }
+
+    .screen {
+      height: 307px;
+      width: 630px;
+      border-radius: 16px;
+      background-color: #FFDEE1;
+      border: 5px solid #8A7171;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      align-items: flex-start;
+
+      .screen-head {
+        display: flex;
+        align-items: center;
+        width: 60%;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .search-icon, .dot {
+          padding: 0;
+        }
+
+        .dot {
+          margin-right: 5px;
+        }
+
+      }
+
+      h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 60px;
+        font-weight: 400;
+        color: #87979F;
+
+        span {
+          color: #EF9EA4;
+        }
+      }
+
+      h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 400;
+        color: #EF9EA4;
+
+        span {
+          color: #87979F;
+        }
+      }
+    }
+  }
+}
