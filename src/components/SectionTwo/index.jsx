@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import avatarGif from '../../assets/avatar.gif'
 import screenOne from '../../assets/tela1.svg'
 import screenTwo from '../../assets/tela2.svg'
@@ -39,15 +39,38 @@ const customStyles = {
   },
 }
 
+Modal.setAppElement('#root');
+
 export function SectionTwo() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [projectModal, setProjectModal] = useState()
 
-  function openModal() {
-    setIsOpen(true);
+  const listProjects = [
+    {
+      'image': devfinderImg,
+      'title': 'devfinder',
+      'description': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis est aspernatur autem provident, ex cum modi. Alias amet minima voluptas quos beatae, facere nisi doloribus in vel ex? Exercitationem, ipsa?',
+      'repo': 'ttps://github.com/giovanna-mrosa/frontendMentor-devfinder',
+      'demo': 'https://frontend-mentor-devfinder.vercel.app/',
+    },
+    {
+      'image': devfinderImg,
+      'title': 'shortly',
+      'description': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis est aspernatur autem provident, ex cum modi. Alias amet minima voluptas quos beatae, facere nisi doloribus in vel ex? Exercitationem, ipsa?',
+      'repo': 'https://github.com/giovanna-mrosa/frontendMentor-shortly',
+      'demo': 'https://frontend-mentor-devfinder.vercel.app/',
+    }
+  ]
+
+  function openModal(id) {
+    const selectedProject = listProjects.find(project => project.title === id)
+
+    setProjectModal(selectedProject)
+    setIsOpen(true)
   }
 
   function closeModal() {
-    setIsOpen(false);
+    setIsOpen(false)
   }
 
   return (
@@ -71,15 +94,32 @@ export function SectionTwo() {
         <div className="projects">
           <div className="row">
             <div className="project">
-              <img src={screenOne} alt="" className="mockup" onClick={openModal} />
+              <img 
+                src={screenOne} 
+                alt="" 
+                className="mockup" 
+                onClick={(event) => openModal(event.target.id)}
+                id="devfinder"
+              />
               <p>devfinder</p>
             </div>
             <div className="project">
-              <img src={screenTwo} alt="" className="mockup" />
+              <img 
+                src={screenTwo} 
+                alt="" onClick={(event) => openModal(event.target.id)}
+                id="shortly"
+                className="mockup" 
+              />
               <p>shortly</p>
             </div>
             <div className="project">
-              <img src={screenThree} alt="" className="mockup" />
+              <img 
+                src={screenThree} 
+                alt="" 
+                className="mockup" 
+                onClick={(event) => openModal(event.target.id)}
+                id="adviceGenerator"
+              />
               <p>advice-genarator</p>
             </div>
           </div>
@@ -112,8 +152,8 @@ export function SectionTwo() {
             </div>
           </div>
         </div>
-      </section>
-      <Modal
+      </section>      
+        <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
@@ -122,12 +162,12 @@ export function SectionTwo() {
         <img src={devfinderImg} alt="" className="project1"/>
         <img src={closeIcon} onClick={closeModal} alt="Close icon" className="close-icon" />
         <div className="content-modal">
-          <h2 className="title-modal">devfinder</h2>          
-          <p className="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis est aspernatur autem provident, ex cum modi. Alias amet minima voluptas quos beatae, facere nisi doloribus in vel ex? Exercitationem, ipsa?</p>
+          <h2 className="title-modal">{projectModal?.title}</h2>          
+          <p className="description">{projectModal?.description}</p>
           <div className="buttons-modal-box">
             <button className="button-modal">
               <a 
-                href="https://github.com/giovanna-mrosa/frontendMentor-devfinder"
+                href={projectModal?.repo}
                 target='_blank' rel="noreferrer"
               >
                 Repo
@@ -135,7 +175,7 @@ export function SectionTwo() {
             </button>
             <button className="button-modal">
               <a 
-                href="https://frontend-mentor-devfinder.vercel.app/"
+                href={projectModal?.demo}
                 target='_blank' rel="noreferrer"
               >
                 Demo
