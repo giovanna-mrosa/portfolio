@@ -19,10 +19,10 @@ export function SectionThree() {
   async function handleSubmit(event){
     event.preventDefault();
     await send(
-      'SERVICE_ID',
-      'TEMPLATE_ID',
+      'service_no1g0uq',
+      'template_ma45119',
       toSend,
-      'USER_ID'
+      'I8LYQHrNPwhdNyb_S'
     )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
