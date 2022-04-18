@@ -60,6 +60,7 @@ export function SectionThree() {
               className="input" 
               value={toSend.from_name}
               onChange={handleChange}
+              autocomplete="off"
             />
             <input 
               type="email" 
@@ -68,6 +69,7 @@ export function SectionThree() {
               className="input"
               value={toSend.reply_to}
               onChange={handleChange}
+              autocomplete="off"
             />        
             <textarea 
               name="message" 
