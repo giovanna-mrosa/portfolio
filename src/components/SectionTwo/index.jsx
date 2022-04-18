@@ -11,6 +11,7 @@ import screenSeven from '../../assets/tela7.svg'
 import screenEight from '../../assets/tela8.svg'
 import screenNine from '../../assets/tela9.svg'
 import bgWeb from '../../assets/bubble-bg-web.png'
+import bgMob from '../../assets/bubble-bg-mobile.png'
 import closeIcon from '../../assets/close.svg'
 import devfinderImg from '../../assets/devfinder.svg'
 import shortlyImg from '../../assets/shortly.svg'
@@ -24,6 +25,7 @@ import mmdecorImg from '../../assets/mmdecor.png'
 
 import './styles.scss'
 import Modal from 'react-modal';
+import Carousel from 'react-elastic-carousel';
 
 const customStyles = {
   content: {
@@ -44,7 +46,33 @@ const customStyles = {
     alignItems: 'flex-end',
     padding: '40px',
     gap: '60px',
-    background: '#EBE6E6'
+    background: '#FFDEE1'
+  },
+}
+
+const customStylesMobile = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    overflow: 'hidden',
+    zIndex: '4',
+    height: '610px',
+    width: '310px',
+    borderRadius: '18px',
+    position: 'relative',
+    border: 'none',
+    boxShadow: '0px 4px 4px 0px #00000040',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: '40px 30px 20px 30px',
+    gap: '0',
+    background: '#FFDEE1',
   },
 }
 
@@ -136,7 +164,7 @@ export function SectionTwo() {
       <section className="about-me-section"  id="about-me">
         <div className="about-me-text">
           <h2>about me</h2>
-          <p>
+          <p className="about-me-paragraph">
             My name is Giovanna Rosa I’m a aspiring Front End Developer based in São Paulo. I describe myself as a passionate new developer, that definitely learn to love coding and is not afraid of big changes and challenges. I enjoy creating beautifully designed, intuitive and functional websites. <br />
             <br />
             Graduated in Fashion Design, I am currently in a career transition, studying software development having as main tools HTML, CSS, SASS, JavaScript and React JS. <br />
@@ -147,111 +175,216 @@ export function SectionTwo() {
         <img src={avatarGif} alt="Avatar" />
       </section>
       <section className="portfolio-section" id="portfolio">
-        <img src={bgWeb} alt="Bubble background" className="bg" />
+        <img 
+          src={window.screen.width > 768 ? bgWeb : bgMob} 
+          alt="Bubble background" 
+          className="bg" />
         <h2>portfolio</h2>
-        <div className="projects">
-          <div className="row">
-            <div className="project">
-              <img 
-                src={screenOne} 
-                alt="Mockup" 
-                className="mockup" 
-                onClick={(event) => openModal(event.target.id)}
-                id="devfinder"
-              />
-              <p>devfinder</p>
+        {window.screen.width > 768 ? (
+          <div className="projects">
+            <div className="row">
+              <div className="project">
+                <img 
+                  src={screenOne} 
+                  alt="Mockup" 
+                  className="mockup" 
+                  onClick={(event) => openModal(event.target.id)}
+                  id="devfinder"
+                />
+                <p>devfinder</p>
+              </div>
+              <div className="project">
+                <img 
+                  src={screenTwo} 
+                  alt="Mockup" 
+                  onClick={(event) => openModal(event.target.id)}
+                  id="shortly"
+                  className="mockup" 
+                />
+                <p>shortly</p>
+              </div>
+              <div className="project">
+                <img 
+                  src={screenThree} 
+                  alt="Mockup" 
+                  className="mockup" 
+                  onClick={(event) => openModal(event.target.id)}
+                  id="adviceGenerator"
+                />
+                <p>advice-generator</p>
+              </div>
             </div>
-            <div className="project">
-              <img 
-                src={screenTwo} 
-                alt="Mockup" 
-                onClick={(event) => openModal(event.target.id)}
-                id="shortly"
-                className="mockup" 
-              />
-              <p>shortly</p>
+            <div className="row">
+              <div className="project">
+                <img 
+                  src={screenFour} 
+                  alt="Mockup" 
+                  className="mockup" 
+                  onClick={(event) => openModal(event.target.id)}
+                  id="manage"
+                />
+                <p>manage</p>
+              </div>
+              <div className="project">
+                <img 
+                  src={screenFive} 
+                  alt="Mockup" 
+                  className="mockup" 
+                  onClick={(event) => openModal(event.target.id)}
+                  id="blogr"
+                />
+                <p>blogr</p>
+              </div>
+              <div className="project">
+                <img 
+                  src={screenSix} 
+                  alt="Mockup" 
+                  className="mockup"
+                  onClick={(event) => openModal(event.target.id)}
+                  id="huddle"
+                />
+                <p>huddle</p>
+              </div>
             </div>
-            <div className="project">
-              <img 
-                src={screenThree} 
-                alt="Mockup" 
-                className="mockup" 
-                onClick={(event) => openModal(event.target.id)}
-                id="adviceGenerator"
-              />
-              <p>advice-genarator</p>
+            <div className="row">
+              <div className="project">
+                <img 
+                  src={screenSeven} 
+                  alt="Mockup" 
+                  className="mockup" 
+                  onClick={(event) => openModal(event.target.id)}
+                  id="easyclass"
+                />
+                <p>easy-class</p>
+              </div>
+              <div className="project">
+                <img 
+                  src={screenEight} 
+                  alt="Mockup" 
+                  className="mockup"
+                  onClick={(event) => openModal(event.target.id)}
+                  id="splitter" 
+                />
+                <p>splitter</p>
+              </div>
+              <div className="project">
+                <img 
+                  src={screenNine} 
+                  alt="Mockup" 
+                  className="mockup"
+                  onClick={(event) => openModal(event.target.id)}
+                  id="mmdecor"
+                />
+                <p>mmdecor</p>
+              </div>
             </div>
           </div>
-          <div className="row">
-            <div className="project">
-              <img 
-                src={screenFour} 
-                alt="Mockup" 
-                className="mockup" 
-                onClick={(event) => openModal(event.target.id)}
-                id="manage"
-              />
-              <p>manage</p>
-            </div>
-            <div className="project">
-              <img 
-                src={screenFive} 
-                alt="Mockup" 
-                className="mockup" 
-                onClick={(event) => openModal(event.target.id)}
-                id="blogr"
-              />
-              <p>blogr</p>
-            </div>
-            <div className="project">
-              <img 
-                src={screenSix} 
-                alt="Mockup" 
-                className="mockup"
-                onClick={(event) => openModal(event.target.id)}
-                id="huddle"
-              />
-              <p>huddle</p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="project">
-              <img 
-                src={screenSeven} 
-                alt="Mockup" 
-                className="mockup" 
-                onClick={(event) => openModal(event.target.id)}
-                id="easyclass"
-              />
-              <p>easy-class</p>
-            </div>
-            <div className="project">
-              <img 
-                src={screenEight} 
-                alt="Mockup" 
-                className="mockup"
-                onClick={(event) => openModal(event.target.id)}
-                id="splitter" 
-              />
-              <p>splitter</p>
-            </div>
-            <div className="project">
-              <img 
-                src={screenNine} 
-                alt="Mockup" 
-                className="mockup"
-                onClick={(event) => openModal(event.target.id)}
-                id="mmdecor"
-              />
-              <p>mmdecor</p>
-            </div>
-          </div>
-        </div>
+          ) : (
+            <Carousel 
+              itemsToShow={1.25} 
+              className="carousel-box"
+              pagination={false}
+              showArrows={false}
+            >
+              <div className="project-mob">
+                <img 
+                  src={screenOne} 
+                  alt="Mockup" 
+                  className="mockup-mob" 
+                  onClick={(event) => openModal(event.target.id)}
+                  id="devfinder"
+                />
+                <p>devfinder</p>
+              </div>
+              <div className="project-mob">
+                <img 
+                  src={screenTwo} 
+                  alt="Mockup" 
+                  onClick={(event) => openModal(event.target.id)}
+                  id="shortly"
+                  className="mockup-mob" 
+                />
+                <p>shortly</p>
+              </div>
+              <div className="project-mob">
+                <img 
+                  src={screenThree} 
+                  alt="Mockup" 
+                  className="mockup-mob" 
+                  onClick={(event) => openModal(event.target.id)}
+                  id="adviceGenerator"
+                />
+                <p>advice-generator</p>
+              </div>
+              <div className="project-mob">
+                <img 
+                  src={screenFour} 
+                  alt="Mockup" 
+                  className="mockup-mob" 
+                  onClick={(event) => openModal(event.target.id)}
+                  id="manage"
+                />
+                <p>manage</p>
+              </div>
+              <div className="project-mob">
+                <img 
+                  src={screenFive} 
+                  alt="Mockup" 
+                  className="mockup-mob" 
+                  onClick={(event) => openModal(event.target.id)}
+                  id="blogr"
+                />
+                <p>blogr</p>
+              </div>
+              <div className="project-mob">
+                <img 
+                  src={screenSix} 
+                  alt="Mockup" 
+                  className="mockup-mob"
+                  onClick={(event) => openModal(event.target.id)}
+                  id="huddle"
+                />
+                <p>huddle</p>
+              </div>
+              <div className="project-mob">
+                <img 
+                  src={screenSeven} 
+                  alt="Mockup" 
+                  className="mockup-mob" 
+                  onClick={(event) => openModal(event.target.id)}
+                  id="easyclass"
+                />
+                <p>easy-class</p>
+              </div>
+              <div className="project-mob">
+                <img 
+                  src={screenEight} 
+                  alt="Mockup" 
+                  className="mockup-mob"
+                  onClick={(event) => openModal(event.target.id)}
+                  id="splitter" 
+                />
+                <p>splitter</p>
+              </div>
+              <div className="project-mob">
+                <img 
+                  src={screenNine} 
+                  alt="Mockup" 
+                  className="mockup-mob"
+                  onClick={(event) => openModal(event.target.id)}
+                  id="mmdecor"
+                />
+                <p>mmdecor</p>
+              </div>
+            </Carousel>
+            )
+          }
+        
       </section>      
         <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        style={customStyles}
+        style={window.screen.width > 768 ? customStyles : customStylesMobile}
         contentLabel="Example Modal"
       >
         <img src={projectModal?.image} className="project1"/>

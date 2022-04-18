@@ -51,8 +51,8 @@ export function SectionThree() {
         {emailSent === false ? (
           <>
             <h2>contact</h2>
-          <p>Send me an email or find me on social media...</p>
-          <form onSubmit={handleSubmit}>
+            <p>Send me an email or find me on social media...</p>
+            <form onSubmit={handleSubmit}>
             <input 
               type='text'
               name='from_name' 
@@ -80,12 +80,14 @@ export function SectionThree() {
             />
             <div className="medias-button">
               <button type="submit">Send</button>
-              <a href="https://github.com/giovanna-mrosa" target="_blank" rel="noreferrer">
-                <img src={githubIcon} alt="Github Icon" />
-              </a>
-              <a href="https://linkedin.com/in/giovannamarcarorosa" target="_blank" rel="noreferrer">
-                <img src={linkedinIcon} alt="LinkedIn Icon" />
-              </a>
+              <div className="medias">
+                <a href="https://github.com/giovanna-mrosa" target="_blank" rel="noreferrer">
+                  <img src={githubIcon} alt="Github Icon" />
+                </a>
+                <a href="https://linkedin.com/in/giovannamarcarorosa" target="_blank" rel="noreferrer">
+                  <img src={linkedinIcon} alt="LinkedIn Icon" />
+                </a>
+              </div>
             </div>
           </form>
         </>
@@ -94,18 +96,20 @@ export function SectionThree() {
           <h3>Your message was sent.</h3>
           <div className="medias-button-two">
             <button type="button" onClick={() => setEmailSent(false)}>Send another email</button>
-            <a href="https://github.com/giovanna-mrosa" target="_blank" rel="noreferrer">
-              <img src={githubIcon} alt="Github Icon" />
-            </a>
-            <a href="https://linkedin.com/in/giovannamarcarorosa" target="_blank" rel="noreferrer" className="linkedin-icon-two">
-              <img src={linkedinIcon} alt="LinkedIn Icon" />
-            </a>
+            <div className="medias-two">
+              <a href="https://github.com/giovanna-mrosa" target="_blank" rel="noreferrer">
+                <img src={githubIcon} alt="Github Icon" />
+              </a>
+              <a href="https://linkedin.com/in/giovannamarcarorosa" target="_blank" rel="noreferrer" className="linkedin-icon-two">
+                <img src={linkedinIcon} alt="LinkedIn Icon" />
+              </a>
+            </div>
           </div>
         </div>        
         )}        
       </div>
       <ReactFloaterJs>
-        <img src={uniImg} alt="Avatar Unicorn" />
+        <img src={uniImg} alt="Avatar Unicorn" className="uni" />
       </ReactFloaterJs>      
     </section>
   )

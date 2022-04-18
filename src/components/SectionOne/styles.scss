@@ -5,4 +5,14 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  .monitor-mob {
+    width: 370px;
+    height: fit-content;
+    margin-top: 40px;
+  }
+  @media (max-width: 768px) {
+    padding: 30px;
+    overflow: hidden;
+  }
 }

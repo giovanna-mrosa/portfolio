@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: space-between;
   margin-top: -120px;
+  gap: 50px;
 
   .section-three-content {
     display: flex;
@@ -83,11 +84,18 @@
           }
         }
 
-        a {
-          transition: all ease 0.2s;
+        .medias {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 45%;
 
-          &:hover {
-            transform: scale(0.9);
+          a {
+            transition: all ease 0.2s;
+
+            &:hover {
+              transform: scale(0.9);
+            }
           }
         }
       }
@@ -95,6 +103,7 @@
     .message-sent {
       h3 {
         font-size: 40px;
+        width: max-content;
       }
       .medias-button-two {
         display: flex;
@@ -122,10 +131,77 @@
             transform: scale(0.9);
           }
         }
-        .linkedin-icon-two {
-          margin-right: 20px;
+        .medias-two {
+          display: flex;
+          align-items: center;
+          gap: 35px;
+
+          .linkedin-icon-two {
+            margin-right: 20px;
+          }
+        }
+      }
+    }    
+  } 
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 40px 0 40px;
+    justify-content: center;
+
+    .section-three-content {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      order: 2;
+      margin-top: 30px;
+
+      h2 {
+        font-size: 50px;
+      }
+
+      form {
+        width: 100%;
+
+        .input {
+          width: 100%;
+        }
+
+        textarea {
+          width: 100%;
+        }
+        .medias-button {
+          flex-direction: column;
+          gap: 50px;
+          
+          .medias {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+          }
+        }
+      }
+      .message-sent {
+        padding-bottom: 30px;
+
+        .medias-button-two {
+          flex-direction: column;
+          gap: 50px;
+
+          .medias-two {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+          }
         }
       }
     }
-  } 
+    .react-floater-animated {
+      img {
+        width: 100%;
+        height: fit-content;
+        margin-top: 30px;
+      }      
+    }
+  }
 }
