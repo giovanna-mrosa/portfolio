@@ -107,13 +107,17 @@
   @media (max-width: 768px) {
     .about-me-section {
       flex-direction: column;
-      padding: 30px 40px 350px 40px;
+      padding: 0 40px 410px 40px;
 
       .about-me-text {
         text-align: center;
+        order: 2;
 
         h2 {
           font-size: 50px;
+          margin-top: -40px;
+          background: url(../../assets/bubble-bg-about.svg) no-repeat center;
+          border-radius: 50px;
         }
 
         .about-me-paragraph {
@@ -132,7 +136,7 @@
       h2 {
         font-size: 50px;
         text-align: center;
-        padding: 90px 40px 0 40px;
+        padding: 110px 40px 0 40px;
       }
     }
   }

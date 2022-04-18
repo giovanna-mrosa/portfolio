@@ -1,6 +1,8 @@
 import React from "react";
 import { Nav } from "../Nav";
-import monitorImg from '../../assets/note.svg'
+// import monitorImg from '../../assets/note.svg'
+import bunnyBottom from '../../assets/bunny.svg'
+import starBottomTwo from '../../assets/stars2.svg'
 
 import './styles.scss'
 import { MonitorIntro } from "../MonitorIntro";
@@ -19,11 +21,21 @@ export function SectionOne() {
       {window.screen.width > 768 ? (
               <MonitorIntro />
             ) : (
-              <img 
-                src={monitorImg} 
-                alt="Monitor screen presentation" 
-                className="monitor-mob"
-              />
+              <div className="intro">
+                <img src={bunnyBottom} alt="Bunny" className="bunny" />
+                <img src={starBottomTwo} alt="Stars" className="stars" />
+                <h1>
+                  <span>Hi</span>, <span>I'm</span> Giovanna<span>,</span>
+                  <br />
+                  Front <span>End Developer.</span>
+                </h1>
+                <h2>HTML / CSS / <span>SASS / JS</span> / REACT</h2>
+              </div>
+              // <img 
+              //   src={monitorImg} 
+              //   alt="Monitor screen presentation" 
+              //   className="monitor-mob"
+              // />
             )            
           }
     </div>

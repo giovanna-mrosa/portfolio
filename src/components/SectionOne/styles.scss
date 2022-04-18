@@ -6,6 +6,87 @@
   justify-content: center;
   flex-direction: column;
 
+  .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 60px;
+    position: relative;
+
+    .bunny, .stars, .console {
+      position: absolute;
+      padding: 0;
+    }
+
+    .bunny {
+      top: -10px;
+      left: -20px;
+
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+      animation-name: rotate;
+      animation-timing-function: ease;
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+        100% {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    .stars {
+      top: -20px;
+      right: -35px;
+
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+      animation-name: rotate;
+      animation-timing-function: ease;
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+        100% {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    h1 {
+      width: 100%;
+      text-align: center;
+      font-size: 33px;
+      color: #87979F;
+
+      span {
+        color: #EF9EA4;
+      }        
+    }
+
+    h2 {
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      color: #EF9EA4;
+      cursor: pointer;
+
+      span {
+        color: #87979F;
+      }
+    }
+  }
+
   .monitor-mob {
     width: 370px;
     height: fit-content;
