@@ -3,6 +3,60 @@
   display: flex;
   justify-content: flex-end;
   position: relative;
+
+  #burger {
+    display: none;
+  }
+
+  .burger {
+    width: 40px;
+    height: 40px;
+    background-color: #EF9EA4;
+    border-radius: 50%;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .burger::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    width: 28px;
+    height: 4px;
+    border-radius: 20px;
+    background: #FFDEE1;
+  
+    transition: 1s ease;
+  }
+  
+  .burger::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    width: 16px;
+    height: 4px;
+    border-radius: 20px;
+    background: #FFDEE1;
+  
+    transition: 1s ease;
+  }
+  
+  #burger:checked ~ label .burger::after {
+    transform: rotate(225deg);
+    top: 45%;
+    left: 15%;
+  }
+  
+  #burger:checked ~ label .burger::before {
+    transform: rotate(-225deg);
+    width: 28px;
+    height: 4px;
+    top: 45%;
+    left: 15%;
+  }
+
   .menu-box {
     width: 380px;
     height: 380px;
@@ -17,7 +71,7 @@
     border-radius: 50%;
     z-index: 4;
 
-    transition: all ease 2s;
+    transition: all ease 1s;
 
     .close-menu {
       margin-left: 180px;

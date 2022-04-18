@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import burgerImg from '../../assets/burger.svg'
 
 import './styles.scss'
 
@@ -11,13 +10,12 @@ export function NavMob() {
   }
   return (
 
-    <div className="mob-menu">
-      <img 
-        src={burgerImg} 
-        alt="Hamburger menu  icon" 
-        className="burger-menu" 
-        onClick={handleToggle}
-      />
+    <div className="mob-menu">    
+    
+    <input id="burger" type="checkbox" />
+    <label for="burger">
+      <div class="burger" onClick={handleToggle}  ></div>
+    </label>
       <div className={toggle === true ? "menu-box" : "hidden-menu-box menu-box"}>
         <div className="links-mob">
           <a className="link-menu-mob" href="#about-me">about me</a>
