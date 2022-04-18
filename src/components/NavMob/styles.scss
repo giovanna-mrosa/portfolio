@@ -2,4 +2,50 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  .menu-box {
+    width: 380px;
+    height: 380px;
+    background-color: var(--icon);
+    position: absolute;
+    top: -190px;
+    right: -190px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    border-radius: 50%;
+    z-index: 4;
+
+    transition: all ease 2s;
+
+    .close-menu {
+      margin-left: 180px;
+      height: fit-content;
+      width: 20px;
+    }
+
+    .links-mob {      
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-bottom: 80px;
+      margin-left: 70px;
+      gap: 8px;
+
+      .link-menu-mob {
+        width: 100%;
+        text-decoration: none;
+        color: var(--bg-pink);
+        font-family: 'Nunito', sans-serif;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+  }
+  .hidden-menu-box {
+    top: -450px;
+    right: -450px;
+  }
 }
