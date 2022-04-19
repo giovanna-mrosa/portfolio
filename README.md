@@ -15,8 +15,6 @@ This project was built using these technologies.
 
 ## Features
 
-**📖 Multi-Page Layout**
-
 **🎨 Styled with SCSS with easy to customize colors**
 
 **📱 Fully Responsive**
